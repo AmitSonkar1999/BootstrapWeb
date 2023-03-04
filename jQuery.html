@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script>
+    var arr = [];
+    var table = document.getElementById("tab");
+    
+function fun(){
+    var table = document.getElementById("tab");
+    var jsonn = {};
+        jsonn.id = document.getElementById("id").value;
+        jsonn.name = document.getElementById("name").value;
+        jsonn.class = document.getElementById("class").value;
+        arr.push(jsonn);
+
+        arr.forEach(function (value) {
+            var tr = document.createElement('tr');
+            tr.innerHTML = '<td>' + value.id + '</td>' +
+                '<td>' + value.name + '</td>' +
+                '<td>' + value.class + '</td>' ;
+            table.appendChild(tr);
+        });
+    
+}
+</script>
+</head>
+<body>
+  <div style="display: flex;justify-content: space-around;">
+    <div>
+        <label for="">ID</label>
+        <div><input id="id" type="number"></div>
+    </div>
+    <div>
+        <label for="">Name</label>
+        <div><input id="name" type="text"></div>
+    </div>
+    <div>
+        <label for="">Class</label>
+        <div><input id="class" type="text" ></div>
+    </div>
+    <button onclick="fun()">Add</button>
+  </div>
+  <table id="tab" style="margin: 10%; border: 2px solid black;">
+    <tr>
+        <th>Student-ID</th>
+        <th>Student-Name</th>
+        <th>Student-Class</th>     
+    </tr>  
+  </table>
+  
+    
+</body>
+</html>

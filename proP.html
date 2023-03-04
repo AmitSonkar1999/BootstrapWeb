@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <!-- <div id="main-div">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non reprehenderit sit nisi ut itaque eaque maiores
+            soluta perferendis laudantium vero. Voluptatem odit illo dignissimos excepturi quaerat id nulla, laboriosam
+            quas.</p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae quod quas, porro numquam maxime mollitia? Sit
+            architecto rem, consectetur itaque aspernatur necessitatibus culpa quos perferendis illo iusto, provident
+            nihil! Similique?</p>
+        <p>hello</p>
+        <p>bye</p>
+        <p>Item LIst</p>
+        <ol>
+            <li>item</li>
+            <li>item</li>
+            <li>item</li>
+            <li>item</li>
+        </ol>
+        <input type="text" placeholder="Don't click me">
+    </div>
+    <div id="cmn-div">
+        <button id="btn1">Append</button>
+        <button id="btn2">Prepend</button>
+        <button id="btnt">toggle</button>
+        <button id="check">click Me</button>
+        <button id="after">After</button>
+        <button id="before">Before</button>
+    </div> -->
+
+    <div id="div-1">
+        <input type="text" value="tarun" id="v1">
+        <p><button id="b1">ok</button></p>
+    </div>
+    <div id="div-2">
+        <input type="text" value="pankaj" id="v2">
+        <p><button id="b2">add</button></p>
+    </div>
+
+
+</body>
+<script>
+     $(document).ready(function () {
+        $('#div-2').find(function(){
+            $('#b2').click(function(){
+                var a=$('#v1').val()
+                alert(a);
+            })
+        })
+    //  $("#b2").click(function(){
+    //     $("#v1").val('amit');
+    //  })
+
+
+
+
+
+
+    //     $('ol').css({ "color": "red", "background-color": "blue" })
+    // })
+    // $('#btn1').click(function () {
+    //     $('ol').append('<li>New item</li>')
+    // })
+    // $('#btn2').click(function () {
+    //     $('ol').prepend('<li>item New</li>')
+    // })
+    // $('#btnt').click(function () {
+    //     $('#main-div').toggle();
+    // })
+    // $('#check').css("background-color", "pink").click(function () {
+    //     $('p').empty();
+    // })
+    // $('input').focus(function () {
+    //     $(this).css("background-color", "green")
+    //     $(this).hide(2000, function () {
+    //         alert("why you clicked here");
+    //     })
+    //     $(this).show(3000)
+    // })
+    // $('#after').click(function () {
+    //     $('#cmn-div').after('<br>' + 'hello tarun what are you doing in a days')
+    // })
+    // $('#before').click(function () {
+    //     $('#main-div').before('<br>' + 'Before')
+    })
+    
+</script>
+
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="calculator.js"></script>
+    <style>
+        button:hover{
+            background-color: blue;
+            color: antiquewhite;
+        }
+        input:hover{
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style="text-align: center;">Simple Calculator</h1>
+    <hr>
+    <div style="display:flex; justify-content:space-evenly; margin-top: 5%;">
+        <div><label for="num1">num1</label><br>
+            <input type="text" id="num1">
+        </div>
+        <div><label for="opr">operator</label><br>
+            <select name="" id="opr">
+                <option value="+">+</option>
+                <option value="-">-</option>
+                <option value="*">*</option>
+                <option value="/">/</option>
+            </select>
+        </div>
+        <div><label for="num2">num2</label><br>
+            <input type="text" id="num2">
+        </div>
+        <div><button onclick="calc()">calculate</button><br>
+        <input type="text" id="result" readonly="">
+    </div>
+
+
+    </div>
+    <P id="demo">hello</P>
+
+    <button onclick="pop()">pop</button>
+    <button onclick="push()">Push</button>
+    <button onclick="reverse()">Reverse</button>
+
+    <h2>JavaScript Arrays</h2>
+
+    <p>Array.forEach() calls a function for each array element.</p>
+    
+    <p id="dem"></p>
+    
+    <script>
+    const fruits = ["Banana", "Orange", "Apple", "Mango"];
+    
+    let text = "<ul>";
+    fruits.forEach(myFunction);
+    text += "</ul>";
+    document.getElementById("dem").innerHTML = text;
+    
+    function myFunction(value) {
+      text += "<li>" + value + "</li>";
+    } 
+    </script>
+       
+ 
+
+</body>
+
+</html>

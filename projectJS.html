@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <style>
+        div {
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        table,
+        td,
+        th,
+        tr {
+            border: 2px solid black;
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <p><input type="number" id="id"></p>
+        <p><input type="string" id="name"></p>
+        <p><input type="number" id="class"></p>
+        <button onclick="func()">ADD</button>
+    </div>
+    <table id="tab"></table>
+</body>
+
+<script>
+    var arr = [];
+    var table = document.getElementById("tab");
+    table.innerHTML = `<tr><th>Select</th><th>ID</th><th>NAME</th></tr>`;
+    function func() {
+        table.innerHTML = `<tr><th>Select</th><th>ID</th><th>NAME</th></tr>`;
+        let jsonn = {};
+        jsonn.id = document.getElementById("id").value;
+        jsonn.name = document.getElementById("name").value;
+        jsonn.class = document.getElementById("class").value;
+        if(jsonn.id!="" && jsonn.name!="" && jsonn.class!="")
+        arr.push(jsonn);
+        
+        arr.forEach(function (value) {
+            var tr = document.createElement('tr');
+            tr.innerHTML = '<td>' + value.id +'</td>' +
+                '<td>' + value.name + '</td>' 
+                 ;
+            table.appendChild(tr);
+        });
+    }
+    
+        //     $(":radio").click(function(){
+    //     alert(jsonn.id);
+    // })
+    
+</script>
+
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        var arr=[];
+        var table = document.getElementById('data');
+        table.innerHTML = `<tr><th>ID</th><th>NAME</th><th>CLASS</th></tr>`;
+        function funcs(){
+            table.innerHTML = `<tr><th>ID</th><th>NAME</th><th>CLASS</th></tr>`;
+            
+            var jsonnn={};
+            jsonnn.id = document.getElementById("id").value;
+             jsonnn.name =document.getElementById("name").value;
+             jsonnn.class = document.getElementById("class").value;
+            arr.push(jsonnn);
+            console.log(arr);
+            arr.forEach(function (value){
+                var tr=document.createElement('tr');
+                tr.innerHTML='<td>'+value.id+'</td>'+
+                '<td>'+value.name+'</td>'+
+                '<td>'+value.class+'</td>';
+                table.appendChild(tr);
+            });
+        }
+    </script>
+</head>
+
+<body>
+
+    <p id="we">hello!</p>
+
+    <div style="display: flex; justify-content: space-around;">
+        <div>
+            <p>Emp-id</p>
+            <input id="id" type="number">
+        </div>
+        <div>
+            <p>Emp-name</p>
+            <input id="name" type="text">
+        </div>
+        <div>
+            <p>Emp-dept</p>
+            <input id="class" type="text">
+        </div>
+        <button onclick="funcs()">Checking OR Add</button>
+    </div>
+
+    <table id="data" style="margin-top: 5%;">
+        
+    </table>
+
+
+    <!-- <h2>JavaScript Arrays</h2>
+
+    <p id="d">The best way to loop through an array is using a standard for loop:</p>
+
+    <p id="demo"></p>
+
+    <script>
+        var arr = ["amit", "ankush", "pankaj"];
+        var arr2 = arr.map(myFunction);
+        document.write(arr2);
+        function myFunction(value) {
+            return "AA" + value;
+        }
+        document.write("===================================");
+
+        arr.forEach(function (value) {
+            value = "aa" + value;
+            document.write(value + "<br>");
+        })
+        document.write("===================================");
+
+        // var newarr=["hfaak","dsaam","hakshh"]
+        // newarr.forEach(function(value){
+        //     if(value[i].length=="a")
+        //     document.write(value+"<br>")
+        // })
+        // document.write(value+"<br>")
+
+        // arr.forEach(function(value,index){
+        //     if(index%2==0)
+        //     window.alert(value+"<br>");
+        // })
+
+
+        var ar = ["Pankaj", "anil", "jay", "jaggia"];
+        ar.forEach(function (value) {
+            var ar2 = value.split('');
+            var count = 0;
+            ar2.forEach(function (value1) {
+                if (value1 == 'a') {
+                    count++;
+
+                    if (count == 2) {
+                        document.write("the value is " + value + ":");
+                    }
+                }
+            })
+
+        })
+
+        var ar = ["reaa", "wte", "qyt", "dsaa"];
+        // var ar2=ar.map(function(value){
+        //     return "AA"+value;
+        // })
+        // document.write("<br>"+ar2+"<br>")
+
+        ar.splice(2, 0, "tarun", "preet");
+        document.write(ar);
+        document.write("========================================" + "<br>")
+
+// ar.forEach(function(value,index){
+//     // document.write(value)
+//     if(index%2==0){
+//        document.write("<br>"+value)
+//     }
+// })
+
+
+
+
+// function calc(a,b){
+//     return b-a;
+
+// }
+// var x=calc(2,3);
+// document.write(x);
+
+
+
+
+
+    </script> -->
+
+    
+</body>
+
+
+</html>
